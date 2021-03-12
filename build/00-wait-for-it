@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Set up wait-for-it.
+
+set -Eeuo pipefail
+
+cd "$(dirname "$0")/.."
+
+mkdir -p ./vendor
+if [ ! -f ./vendor/wait-for-it ]; then
+    curl https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh > ./vendor/wait-for-it
+fi
+sudo chmod ugo+rx ./vendor/wait-for-it

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -Eeuo pipefail
+
+cd "$(dirname "$0")/.."
+
+find ./stop -type f -print0 | sort -z | xargs -0 ./vendor/krab/bin/krab run

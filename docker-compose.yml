@@ -1,0 +1,15 @@
+version: '3.4'
+services:
+  deconz:
+    image: zoneminderhq/zoneminder:latest-ubuntu18.04
+    container_name: maison_zoneminder
+    restart: always
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+      - './data/zoneminder/events:/var/cache/zoneminder/events'
+      - './data/zoneminder/images:/var/cache/zoneminder/images'
+      - './data/zoneminder/mysql:/var/lib/mysql'
+      - './data/zoneminder/logs:/var/log/zoneminder'
+    ports:
+      - '8125:80'
+    shm_size: 512M

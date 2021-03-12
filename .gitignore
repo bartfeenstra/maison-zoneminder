@@ -1,0 +1,5 @@
+### Instance-specific files and directories.
+/data
+
+### Third-party files.
+/vendor
