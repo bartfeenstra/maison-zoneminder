@@ -4,4 +4,4 @@ set -Eeuo pipefail
 
 cd "$(dirname "$0")/.."
 
-docker-compose -p maison_deconz down --remove-orphans
+docker-compose -p maison_zoneminder down --remove-orphans

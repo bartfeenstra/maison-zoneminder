@@ -4,5 +4,5 @@ set -Eeuo pipefail
 
 cd "$(dirname "$0")/.."
 
-docker-compose -p maison_deconz up -d
+docker-compose -p maison_zoneminder up -d
 ./bin/await
